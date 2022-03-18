@@ -1,0 +1,28 @@
+package com.simple.dao;
+
+import java.util.ArrayList;
+import org.springframework.stereotype.Repository;
+
+import com.simple.command.BoardVO;
+
+@Repository("ccc")
+public class BoardDAOImpl implements BoardDAO{
+	
+	ArrayList<BoardVO> blist = new ArrayList();
+	@Override
+	public void boardRegist(BoardVO vo) {
+		
+		blist.add(vo);
+	}
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		return blist;
+	}
+
+	@Override
+	public void boardDelete(int bno) {
+		blist.remove(num);
+	}
+
+}

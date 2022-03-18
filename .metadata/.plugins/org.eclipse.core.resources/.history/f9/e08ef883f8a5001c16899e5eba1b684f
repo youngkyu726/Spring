@@ -1,0 +1,30 @@
+package com.simple.service;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Service;
+
+import com.simple.command.BoardVO;
+import com.simple.dao.BoardDAO;
+	
+@Service("bbb")
+public class BoardServiceImpl implements BoardService{
+	
+	BoardDAO boardDao;
+
+	@Override
+	public void boardRegist(BoardVO vo) {
+		
+	}
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		return null;
+	}
+
+	@Override
+	public void boardDelete(int num) {
+		boardDao.delete(num);
+	}
+
+}

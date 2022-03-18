@@ -1,0 +1,37 @@
+package com.simple.dao;
+
+import java.util.ArrayList;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.simple.command.BoardVO;
+
+@Repository("ccc")
+public class BoardDAOImpl implements BoardDAO{
+
+	@Autowired
+	DataSource ds;
+	
+	@Override
+	public void boardRegist(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void boardDelete(int num) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

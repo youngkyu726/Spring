@@ -1,0 +1,37 @@
+package com.simple.controller;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.simple.command.BoardVO;
+import com.simple.service.BoardService;
+
+@Controller
+@RequestMapping("/service")
+public class BoardServiceController {
+
+	@Resource(name="bbb")
+	BoardService boardService;
+	
+	@RequestMapping("/boardRegister")
+	public void boardRegist() {
+		
+	}
+	
+	@RequestMapping("/boardList")
+	public String list(Model model) {
+		ArrayList<BoardVO> blist = boardService.getList();
+		
+		model.addAttribute("blist", blist);
+		
+		return "service/boardList";
+		
+	}
+	
+	@RequestMapping("/boardResult")
+}

@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Fri Mar 18 22:39:01 KST 2022
+org.eclipse.jst.jee.server\:SpringMake=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringMake
+org.eclipse.jst.jee.server\:SpringBasic=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringBasic
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\\uACE0\uC6B0\uB2C8\\.m2\\repository\\org\\springframework\\spring-web\\5.0.7.RELEASE\\spring-web-5.0.7.RELEASE.jar=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringBasic\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\\uACE0\uC6B0\uB2C8\\.m2\\repository\\org\\springframework\\spring-web\\5.2.10.RELEASE\\spring-web-5.2.10.RELEASE.jar=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringMake\\WEB-INF\\lib\\spring-web-5.2.10.RELEASE.jar

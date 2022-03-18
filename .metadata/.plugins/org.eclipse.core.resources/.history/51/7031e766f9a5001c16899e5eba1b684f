@@ -1,0 +1,21 @@
+package com.simple.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.simple.service.BoardService;
+
+@Controller
+@RequestMapping("/service")
+public class BoardServiceController {
+
+	@Resource(name="aaa")
+	BoardService boardService;
+	
+	@RequestMapping("/boardRegister")
+	public void regist() {
+		
+	}
+}
