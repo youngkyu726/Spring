@@ -1,6 +1,4 @@
 #Tomcat publish data
-#Tue Mar 22 11:02:47 KST 2022
-org.eclipse.jst.jee.server\:SpringMyWeb=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringMyWeb
-org.eclipse.jst.jee.server\:SpringBasic=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringBasic
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\\uACE0\uC6B0\uB2C8\\.m2\\repository\\org\\springframework\\spring-web\\5.0.7.RELEASE\\spring-web-5.0.7.RELEASE.jar=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringMyWeb\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\\uACE0\uC6B0\uB2C8\\.m2\\repository\\org\\springframework\\spring-web\\5.2.10.RELEASE\\spring-web-5.2.10.RELEASE.jar=C\:\\Users\\\uACE0\uC6B0\uB2C8\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringMake\\WEB-INF\\lib\\spring-web-5.2.10.RELEASE.jar
+#Tue Mar 22 17:42:54 KST 2022
+org.eclipse.jst.jee.server\:SpringMyWeb=C\:\\apache-tomcat-8.5.59\\wtpwebapps\\SpringMyWeb
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\\uACE0\uC6B0\uB2C8\\.m2\\repository\\org\\springframework\\spring-web\\5.0.7.RELEASE\\spring-web-5.0.7.RELEASE.jar=C\:\\apache-tomcat-8.5.59\\wtpwebapps\\SpringMyWeb\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
