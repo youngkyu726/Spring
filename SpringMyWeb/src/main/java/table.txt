@@ -7,3 +7,13 @@ create table freeboard (
     updatedate date default sysdate
 );
 create sequence freeboard_seq INCREMENT by 1 start with 1 nocache; 
+
+--페이지 구문
+select *
+from (select rownum rn,
+             a.* 
+        from (select *
+              from freeboard
+              order by bno desc) a
+)
+where rn > 10 and rn <= 20;
