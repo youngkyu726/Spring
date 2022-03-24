@@ -10,12 +10,48 @@
   		values(freeboard_seq.nextval, #{writer}, #{title}, #{content}) 
   	</insert>
   	
+  	<!-- CDATA로 감싼 값은 순수한 문자열 형태로 인식  -->
+  	<!-- 동적쿼리의 test에는 조건을 만들고, 전달되는 vo의 getter(변수명)을 사용할 수 있음 -->
   	<select id="getList" resultType="FreeBoardVO">
-  		select * from freeboard order by bno desc
+   		<![CDATA[
+  		select *
+		from (select rownum rn,
+		             a.* 
+		        from (select *
+		              from freeboard
+		]]>              
+		         <if test="searchType == 'title'"  >where title   like '%' || #{searchName} ||'%' </if>
+		         <if test="searchType == 'writer'" >where writer  like '%' || #{searchName} ||'%' </if>
+		         <if test="searchType == 'content'">where content like '%' || #{searchName} ||'%' </if>
+		         <if test="searchType == 'titcont'">where title   like '%' || #{searchName} ||'%' or content like '%' || #{searchName} || '%' </if>
+		         <if test="searchType == 'null' or searchType == '' ">where 1 = 1</if> 
+		         <!-- if와 같다
+		         <choose>
+		         	<when test="searchType == 'title'"  >where title   like '%' || #{searchName} ||'%' </when>
+		         	<when test="searchType == 'writer'" >where writer  like '%' || #{searchName} ||'%' </when>
+		         	<when test="searchType == 'content'">where content like '%' || #{searchName} ||'%' </when>
+		         	<when test="searchType == 'titcont'">where title   like '%' || #{searchName} ||'%' or content like '%' || #{searchName} || '%' </when>
+		         	<otherwise>where 1 = 1</otherwise>
+		         </choose>
+		         -->
+		<![CDATA[              
+		              order by bno desc) a)
+		where rn > (#{pageNum} -1) * #{amount} and rn <= #{pageNum} * #{amount} 
+		]]>
   	</select>
   	
   	<select id="getContent" resultType="freeBoardVO">
   		select * from freeboard where bno = #{bno}
+  	</select>
+  	
+  	<!-- 전체게시글 수 -->
+  	<select id="getTotal" resultType="int">
+  		select count(*) as total from freeboard
+  		<if test="searchType == 'title'"  >where title   like '%' || #{searchName} ||'%' </if>
+		<if test="searchType == 'writer'" >where writer  like '%' || #{searchName} ||'%' </if>
+        <if test="searchType == 'content'">where content like '%' || #{searchName} ||'%' </if>
+        <if test="searchType == 'titcont'">where title   like '%' || #{searchName} ||'%' or content like '%' || #{searchName} || '%' </if>
+        <if test="searchType == 'null' or searchType == '' ">where 1 = 1</if>
   	</select>
   	
   	<update id="update">
